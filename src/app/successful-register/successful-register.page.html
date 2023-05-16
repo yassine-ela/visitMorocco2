@@ -1,0 +1,19 @@
+<ion-content>
+  <div class="center">
+    <ion-card mode="ios" color="success">
+      <ion-card-header>
+        <ion-card-title>You will visit morocco !</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content
+        >Hi <b>{{authService.userData?.displayName}}</b> You have succesfully
+        subscribed to the vacation trip : {{city.name}} for <b>{{city.price}}</b> Dhs
+        <br />
+        <b>Date : {{currentDate()}}</b>
+      </ion-card-content>
+      <ion-button [routerLink]="['/home']" style="margin: 1rem" expand="block">
+        Return to cities list
+      </ion-button>
+    </ion-card>
+  </div>
+</ion-content>

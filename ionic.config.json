@@ -1,0 +1,8 @@
+{
+  "name": "Ionicourses",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

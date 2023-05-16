@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div>
+    <div class="center" style="background-color: #FFF7E9;">
+      <ion-item lines="full" style="--background: #FFF7E9;">
+        <ion-label position="floating" style="margin-bottom: 10px;">Email</ion-label>
+        <ion-input type="text" #email required></ion-input>
+      </ion-item>
+      <ion-item lines="full"style="--background: #FFF7E9;" >
+        <ion-label position="floating" style="margin-bottom: 10px;">Password</ion-label>
+        <ion-input type="password" #password required></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button
+            type="submit"
+            style="--background:#FF731D;"
+            expand="block"
+            (click)="authService.SignIn(email.value, password.value)"
+            >Sign In</ion-button
+          >
+          <a style="margin-left: 1rem">
+            <span routerLink="/reset-password" style="color: #FF731D;">Forgot Password?</span>
+          </a>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

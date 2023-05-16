@@ -1,0 +1,32 @@
+<ion-content>
+  <div class="auth-form" center>
+    <ion-col>
+      <ion-button style="display: flex;justify-content: center;margin: 0 auto;width: fit-content;font-size: 24px;"
+        [routerLink]="['/registration']"
+        expand="block"
+        color="primary"
+        >Register</ion-button
+      >
+      <span class="already" style="text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; color: white;font-size: 32px;font-weight: bold;">Already a user?</span>
+      <ion-button style="display: flex;justify-content: center;margin: 0 auto;width: fit-content;font-size: 24px;margin-top: 20px;" [routerLink]="['/login']" expand="block" color="success">
+        Sign In</ion-button
+      >
+      <ion-button style="display: flex;justify-content: center;margin: 0 auto;width: fit-content;font-size: 24px;margin-top: 20px;"
+        expand="block"
+        color="danger"
+        (click)="authService.GoogleAuth()"
+      >
+        <ion-icon name="logo-google" slot="start"></ion-icon>
+        Sign In with Google</ion-button
+      >
+      <ion-button style="display: flex;justify-content: center;margin: 0 auto;width: fit-content;font-size: 24px;margin-top: 20px;"
+        expand="block"
+        color="primary"
+        (click)="authService.FacebookAuth()"
+      >
+        <ion-icon name="logo-facebook" slot="start"></ion-icon>
+        Sign In with Facebook</ion-button
+      >
+    </ion-col>
+  </div>
+</ion-content>

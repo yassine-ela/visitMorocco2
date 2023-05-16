@@ -1,0 +1,31 @@
+ion-content {
+  --background: url("../../assets/ac4.jpg") no-repeat center center / cover;
+}
+
+
+.welcome-text {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #fff;
+  width: 70%;
+}
+.welcome-p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #fff;
+  width: 70%;
+}
+
+.page-container {
+  height: 100vh;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+ 
+}

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{city.name}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card style="--background: #FFF7E9;">
+    <img
+      src="{{city.imageUrl}}"
+      style="height: 200px; width: 100%; object-fit: cover"
+    />
+    <ion-card-header>
+      <ion-card-title style="color: #FF731D;font-size: 46px;font-weight: bolder;text-align: center;">{{city.name}}</ion-card-title>
+      <ion-card-subtitle style="color: #5F9DF7;font-size: 22px;font-weight: bold;text-align: center;">Region: {{city.region}}</ion-card-subtitle>
+      <ion-card-subtitle style="color: #5F9DF7;font-size: 22px;font-weight: bold;text-align: center;"> Date : {{city.date}}</ion-card-subtitle>
+      <ion-card-subtitle style="color: #5F9DF7;font-size: 22px;font-weight: bold;text-align: center;"> duration in days  : {{city.duration}}</ion-card-subtitle>
+      <h4 style="color: #5F9DF7;font-size: 22px;font-weight: bold;text-align: center;">Activities :</h4>
+      <ion-chip
+        style="color:#FF731D;font-size: 20px;justify-content: center;display: flex;margin: 0 auto;width: fit-content;"
+        outline
+        *ngFor="let item of city.activities.split(',')"
+      >
+        <ion-label>{{item}}</ion-label>
+      </ion-chip>
+    </ion-card-header>
+
+    <ion-card-content style="color: #1746A2;font-size: 20px;margin-top: 20px;"> {{city.description}} </ion-card-content>
+    <ion-chip style="color:#FF731D;margin-left: 1rem;justify-content: center;display: flex;margin: 0 auto;width: fit-content;height: 50px;" outline>
+      <ion-label  style="font-size: 30px;" >{{city.price}} DHS</ion-label>
+    </ion-chip>
+    <ion-button
+      style="--background:#FF731D;margin: 1rem;font-size: 32px;height: 50px;width: fit-content;margin: 0 auto;"
+      expand="block"
+      (click)="register(city)"
+      >Subscribe</ion-button
+    >
+  </ion-card>
+</ion-content>
